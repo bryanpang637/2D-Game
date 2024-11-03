@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://h0hedy42uiqw"]
+[gd_scene load_steps=14 format=3 uid="uid://h0hedy42uiqw"]
 
 [ext_resource type="PackedScene" uid="uid://bn27ef53ebkiu" path="res://scenes/character.tscn" id="1_h2hot"]
 [ext_resource type="Texture2D" uid="uid://dg2ilvn5uomuf" path="res://assests/Assets/Props.png" id="2_2vyxn"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d24cntpcfy7ff" path="res://assests/Assets/Background-2.png" id="5_obfpr"]
 [ext_resource type="Texture2D" uid="uid://eawlrc0ipts8" path="res://assests/Assets/Screenshot 2024- at 1.26.43 AM.png" id="6_fosmd"]
 [ext_resource type="PackedScene" uid="uid://5v37eya0y6qt" path="res://scenes/kill_zone.tscn" id="7_s13ul"]
+[ext_resource type="PackedScene" uid="uid://g7w2w7lxlibl" path="res://scenes/checkpoint_2.tscn" id="8_utuh3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcy5h"]
 texture = ExtResource("2_2vyxn")
@@ -578,3 +579,6 @@ texture = ExtResource("6_fosmd")
 
 [node name="Area2D" parent="." instance=ExtResource("7_s13ul")]
 position = Vector2(-139, 35)
+
+[node name="checkpoint2" parent="." instance=ExtResource("8_utuh3")]
+position = Vector2(390, -900)
