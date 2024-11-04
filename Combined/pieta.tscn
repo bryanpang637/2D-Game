@@ -7,7 +7,7 @@
 script = ExtResource("1_3lyxc")
 
 [node name="Pieta" type="Sprite2D" parent="."]
-position = Vector2(316, 250)
+position = Vector2(316, 45)
 scale = Vector2(0.0747549, 0.0747549)
 texture = ExtResource("1_660ck")
 
@@ -17,12 +17,11 @@ scale = Vector2(0.396459, 0.396459)
 zoom = Vector2(3, 3)
 limit_bottom = 152
 limit_smoothed = true
-position_smoothing_enabled = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 354.0
-offset_top = 170.0
-offset_right = 427.0
-offset_bottom = 205.0
+offset_left = 353.0
+offset_top = -36.0
+offset_right = 426.0
+offset_bottom = -1.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
