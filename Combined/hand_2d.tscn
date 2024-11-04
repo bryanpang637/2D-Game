@@ -17,7 +17,6 @@ scale = Vector2(0.396459, 0.396459)
 zoom = Vector2(3, 3)
 limit_bottom = 152
 limit_smoothed = true
-position_smoothing_enabled = true
 
 [node name="Button" type="Button" parent="."]
 offset_left = 277.0

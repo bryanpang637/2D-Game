@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dymm85vx54nf0"]
+[gd_scene load_steps=32 format=3 uid="uid://dymm85vx54nf0"]
 
 [ext_resource type="Texture2D" uid="uid://c53iptad5f6vv" path="res://assests/Assets/Museum_entrance_layer_1_32x32.png" id="1_xplp3"]
 [ext_resource type="Texture2D" uid="uid://b7x50foeiuf5r" path="res://assests/Assets/Museum_entrance_layer_2_32x32.png" id="2_ce4cu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dheoxaoh2u7gc" path="res://assests/Assets/dial-clock-vintage-game-pixel-art-vector-47157513.png" id="5_se1eq"]
 [ext_resource type="PackedScene" uid="uid://c61sqweqntey7" path="res://scenes/top down character.tscn" id="5_wbh7q"]
 [ext_resource type="PackedScene" uid="uid://bxsupb0agg36k" path="res://checkpoint_museum.tscn" id="7_u7ual"]
+[ext_resource type="Texture2D" uid="uid://dk25l664q3cq0" path="res://scenes/Time machine.png" id="8_1nqtw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3tw5"]
 texture = ExtResource("1_xplp3")
@@ -1262,6 +1263,57 @@ sources/4 = SubResource("TileSetAtlasSource_s400i")
 sources/5 = SubResource("TileSetAtlasSource_b0guv")
 sources/6 = SubResource("TileSetAtlasSource_s6bqy")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wia3u"]
+size = Vector2(51, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fgt2"]
+size = Vector2(56, 99)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qupt4"]
+size = Vector2(54, 101)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16bl0"]
+size = Vector2(50, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_082ye"]
+size = Vector2(236, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6md4"]
+size = Vector2(351, 157)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt32i"]
+size = Vector2(252, 135)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tjsn"]
+size = Vector2(29, 278)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pcgs"]
+size = Vector2(445, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbf4t"]
+size = Vector2(30, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6aur3"]
+size = Vector2(26, 243)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jro7c"]
+size = Vector2(315, 121)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_335ef"]
+size = Vector2(26, 229)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdirs"]
+size = Vector2(26, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60cyl"]
+size = Vector2(1057, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2glsq"]
+size = Vector2(251, 263)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2q02"]
+size = Vector2(197, 74)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1273,16 +1325,92 @@ layer_1/tile_data = PackedInt32Array(-1114119, 524291, 1, -1179652, 786435, 2, -
 layer_2/name = "Layer2"
 
 [node name="Dial-clock-vintage-game-pixel-art-vector-47157513" type="Sprite2D" parent="."]
-position = Vector2(525, -126)
+position = Vector2(663, -150)
 scale = Vector2(0.0534999, 0.0534999)
 texture = ExtResource("5_se1eq")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_wbh7q")]
 position = Vector2(-118, 172)
+scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(3, 3)
 limit_smoothed = true
 
 [node name="checkpoint_museum" parent="." instance=ExtResource("7_u7ual")]
-position = Vector2(525, -128)
+position = Vector2(663, -152)
+
+[node name="TimeMachine" type="Sprite2D" parent="."]
+position = Vector2(664, -185)
+scale = Vector2(0.0516581, 0.0516581)
+texture = ExtResource("8_1nqtw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-52.5, -168.5)
+shape = SubResource("RectangleShape2D_wia3u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(24, -166.5)
+shape = SubResource("RectangleShape2D_1fgt2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(104, -165.5)
+shape = SubResource("RectangleShape2D_qupt4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(504, 170.5)
+shape = SubResource("RectangleShape2D_16bl0")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-125, 56)
+shape = SubResource("RectangleShape2D_082ye")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(233.5, 73.5)
+shape = SubResource("RectangleShape2D_j6md4")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-138, 252.5)
+shape = SubResource("RectangleShape2D_dt32i")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1031.5, 94)
+shape = SubResource("RectangleShape2D_5tjsn")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(23.5, -294)
+shape = SubResource("RectangleShape2D_8pcgs")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-185, -129)
+shape = SubResource("RectangleShape2D_tbf4t")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(232, -126.5)
+shape = SubResource("RectangleShape2D_6aur3")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(599.5, -247.5)
+shape = SubResource("RectangleShape2D_jro7c")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(456, -164.5)
+shape = SubResource("RectangleShape2D_335ef")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(745, -120)
+shape = SubResource("RectangleShape2D_mdirs")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(515.5, 264.5)
+shape = SubResource("RectangleShape2D_60cyl")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(919.5, -176.5)
+shape = SubResource("RectangleShape2D_2glsq")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(344.5, -40)
+shape = SubResource("RectangleShape2D_y2q02")
