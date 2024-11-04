@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cusqtasuxaab6"]
+[gd_scene load_steps=3 format=3 uid="uid://cs7kocq1ei7fb"]
 
 [ext_resource type="Script" path="res://Scenes/bg_scenes_1.gd" id="1_4et0k"]
 [ext_resource type="Texture2D" uid="uid://g810if2whc4l" path="res://Assets/WechatIMG783.jpg" id="1_5bvsy"]

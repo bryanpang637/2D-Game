@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://ckmxp8jfk8n84" path="res://Assets/Legacy Fantasy - Kingdom Fortress - Update/Tiles/Props.png" id="4_1bqp7"]
 [ext_resource type="Texture2D" uid="uid://s46xxjw5xgq8" path="res://Assets/Legacy Fantasy - Kingdom Fortress - Update/Tiles/Assets.png" id="5_tc3oi"]
 [ext_resource type="PackedScene" uid="uid://bslkwmaaiqlh5" path="res://Player/character_body_2d.tscn" id="7_otlba"]
-[ext_resource type="PackedScene" uid="uid://jppedv1wrd17" path="res://scenes/killzone.tscn" id="8_2vilr"]
-[ext_resource type="PackedScene" uid="uid://diauk8y5lmdfh" path="res://scenes/checkpoint1-h.tscn" id="9_elwtx"]
-[ext_resource type="PackedScene" uid="uid://ccaqsdj6psa6a" path="res://scenes/checkpoint finallevel transit.tscn" id="10_d3y6b"]
+[ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="8_2vilr"]
+[ext_resource type="PackedScene" path="res://scenes/checkpoint1-h.tscn" id="9_elwtx"]
+[ext_resource type="PackedScene" path="res://scenes/checkpoint finallevel transit.tscn" id="10_d3y6b"]
 [ext_resource type="PackedScene" uid="uid://cegybjqrmk68p" path="res://scenes/platform1.tscn" id="10_mok7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wf11p"]

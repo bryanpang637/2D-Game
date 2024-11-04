@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2ihhv4gf2tkb"]
+[gd_scene load_steps=4 format=3 uid="uid://dl3kqsmus71od"]
 
 [ext_resource type="Script" path="res://Script/mian.gd" id="1_jlgaf"]
 [ext_resource type="Texture2D" uid="uid://7kfixqwoab22" path="res://Assets/bryanpang_03177_Pixel_game_style_museumsimplewhite_main_color_0cd383db-2c87-4c59-b967-3eb2b0b17983_0.png" id="2_8wqsx"]
+[ext_resource type="Texture2D" uid="uid://biyrgdv8jkhru" path="res://scenes/WONDER-MUSEUM-STORY-11-4-2024 (2).png" id="3_y3hjy"]
 
 [node name="Mian" type="Node2D"]
 script = ExtResource("1_jlgaf")
@@ -40,6 +41,11 @@ offset_bottom = 569.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "QUIT"
+
+[node name="Wonder-museum-story-11-4-2024(2)" type="Sprite2D" parent="."]
+position = Vector2(590, 145)
+scale = Vector2(1.14407, 1.14407)
+texture = ExtResource("3_y3hjy")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
