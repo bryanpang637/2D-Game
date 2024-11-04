@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://d07p1y6pvqvri" path="res://Assets/Legacy Fantasy - Kingdom Fortress - Update/Tiles/Vegetation-export.png" id="3_ctitq"]
 [ext_resource type="Texture2D" uid="uid://ckmxp8jfk8n84" path="res://Assets/Legacy Fantasy - Kingdom Fortress - Update/Tiles/Props.png" id="4_1bqp7"]
 [ext_resource type="Texture2D" uid="uid://s46xxjw5xgq8" path="res://Assets/Legacy Fantasy - Kingdom Fortress - Update/Tiles/Assets.png" id="5_tc3oi"]
-[ext_resource type="PackedScene" uid="uid://cegybjqrmk68p" path="res://Scenes/platform.tscn" id="6_rgy8g"]
 [ext_resource type="PackedScene" uid="uid://bslkwmaaiqlh5" path="res://Player/character_body_2d.tscn" id="7_otlba"]
-[ext_resource type="PackedScene" uid="uid://jppedv1wrd17" path="res://Scenes/killzone.tscn" id="8_2vilr"]
-[ext_resource type="PackedScene" uid="uid://diauk8y5lmdfh" path="res://Scenes/checkpoint1-h.tscn" id="9_elwtx"]
-[ext_resource type="PackedScene" uid="uid://ccaqsdj6psa6a" path="res://Scenes/checkpoint finallevel transit.tscn" id="10_d3y6b"]
+[ext_resource type="PackedScene" uid="uid://jppedv1wrd17" path="res://scenes/killzone.tscn" id="8_2vilr"]
+[ext_resource type="PackedScene" uid="uid://diauk8y5lmdfh" path="res://scenes/checkpoint1-h.tscn" id="9_elwtx"]
+[ext_resource type="PackedScene" uid="uid://ccaqsdj6psa6a" path="res://scenes/checkpoint finallevel transit.tscn" id="10_d3y6b"]
+[ext_resource type="PackedScene" uid="uid://cegybjqrmk68p" path="res://scenes/platform1.tscn" id="10_mok7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wf11p"]
 texture = ExtResource("1_8hc7i")
@@ -2088,42 +2088,7 @@ sources/0 = SubResource("TileSetAtlasSource_i5gr7")
 sources/1 = SubResource("TileSetAtlasSource_mhnun")
 sources/2 = SubResource("TileSetAtlasSource_5mxv5")
 
-[sub_resource type="Animation" id="Animation_8sruc"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1299, -88)]
-}
-
-[sub_resource type="Animation" id="Animation_d80y3"]
-resource_name = "new_animation"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1299, -88), Vector2(1372, -88)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_e1esb"]
-_data = {
-"RESET": SubResource("Animation_8sruc"),
-"new_animation": SubResource("Animation_d80y3")
-}
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_keukh"]
 
 [sub_resource type="Animation" id="Animation_ek6ph"]
 resource_name = "1"
@@ -2163,7 +2128,42 @@ _data = {
 "RESET": SubResource("Animation_yu2ql")
 }
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_keukh"]
+[sub_resource type="Animation" id="Animation_8sruc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1299, -88)]
+}
+
+[sub_resource type="Animation" id="Animation_d80y3"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1299, -88), Vector2(1372, -88)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e1esb"]
+_data = {
+"RESET": SubResource("Animation_8sruc"),
+"new_animation": SubResource("Animation_d80y3")
+}
 
 [sub_resource type="Animation" id="Animation_763bf"]
 length = 0.001
@@ -2238,29 +2238,11 @@ layer_7/tile_data = PackedInt32Array(65565, 1572866, 11, 131101, 1572866, 12, 19
 layer_8/name = "Layer8"
 layer_8/tile_data = PackedInt32Array(262175, 1966082, 13, 196640, 2031618, 12, 262176, 2031618, 13, 196641, 2097154, 12, 262177, 2097154, 13, 196642, 2162690, 12, 262178, 2162690, 13, 262179, 2228226, 13, 262174, 1900546, 13, 196639, 1966082, 12)
 
-[node name="Platform" parent="." instance=ExtResource("6_rgy8g")]
-position = Vector2(1299, -88)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]
-libraries = {
-"": SubResource("AnimationLibrary_e1esb")
-}
-autoplay = "new_animation"
-
-[node name="Platform2" parent="." instance=ExtResource("6_rgy8g")]
-position = Vector2(730, 136)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2"]
-libraries = {
-"": SubResource("AnimationLibrary_n7aed")
-}
-autoplay = "1"
-
 [node name="Player" parent="." instance=ExtResource("7_otlba")]
 position = Vector2(-41, 73)
 collision_layer = 2
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(0, -32)
 zoom = Vector2(3, 3)
 limit_bottom = 152
@@ -2274,17 +2256,35 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_keukh")
 
-[node name="Platform3" parent="." instance=ExtResource("6_rgy8g")]
-position = Vector2(2009, -182)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform3"]
-libraries = {
-"": SubResource("AnimationLibrary_xje8y")
-}
-autoplay = "new_animation"
-
 [node name="Checkpoint" parent="." instance=ExtResource("9_elwtx")]
 position = Vector2(743, -210)
 
 [node name="Checkpoint finallevel transit" parent="." instance=ExtResource("10_d3y6b")]
 position = Vector2(2042, -52)
+
+[node name="Platform4" parent="." instance=ExtResource("10_mok7o")]
+position = Vector2(730, 136)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform4"]
+libraries = {
+"": SubResource("AnimationLibrary_n7aed")
+}
+autoplay = "1"
+
+[node name="Platform2" parent="." instance=ExtResource("10_mok7o")]
+position = Vector2(1299, -88)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2"]
+libraries = {
+"": SubResource("AnimationLibrary_e1esb")
+}
+autoplay = "new_animation"
+
+[node name="Platform" parent="." instance=ExtResource("10_mok7o")]
+position = Vector2(2009, -182)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]
+libraries = {
+"": SubResource("AnimationLibrary_xje8y")
+}
+autoplay = "new_animation"
